@@ -1,0 +1,43 @@
+<scroll-view scroll-y="true" style="height:100%;">
+  <view>
+    <view class='fw-store' wx:for="{{dataList}}" wx:key="{{index}}" wx:for-item="list">
+      <view class='miniDetails' data-store-nature='{{list.store.storeNature}}' data-store-id='{{list.storeId}}' bindtap='toMiniProgram'></view>
+      <view class='fw-top'>
+        <image class='fw-logo' src='{{baseUrl}}{{list.store.logo}}?x-oss-process=style/logo'></image>
+        <view class='fw-iew1'>{{list.store.name}}
+          <text>{{list.store.storeNature==1?"新批零":"新零售"}}</text>
+          <text hidden='{{!list.isPurchaser}}'>友</text>
+        </view>
+        <view class='fw-iew'>
+          <text>{{list.store.businessScope}}</text>
+          <text class='text' wx:if='{{list.floorInfo!=null}}'>{{list.floorInfo.mallName}} {{list.floorInfo.balconyName}} {{list.floorInfo.floorName}} {{list.floorInfo.areaName}} {{list.floorInfo.storeDoorNum}}</text>
+        </view>
+        <image class='fw-left' src='/image/mallr.png'></image>
+      </view>
+      <view class='fw-cont'>
+        <view wx:for="{{list.goodsList}}" wx:key="{{index}}">
+          <image class='fw-c-img' src='{{baseUrl}}{{item.mainImgUrl}}?x-oss-process=style/goods-small'></image>
+           <block wx:if='{{list.store.storeNature==1}}'>
+            <block wx:if='{{list.isPurchaser}}' class='new_left'>
+              <view style='font-size:22rpx'>零售:
+                <text class='ys-font-line'>￥{{item.sellPrice}}</text>
+              </view>
+              <view class='ym-pri'>批发:
+                <text class='fw-you'>￥{{item.wholesalePrice}}</text>
+              </view>
+            </block>
+            <block wx:else class='new_left'>
+              <view class='ym-pri'>零售:
+                <text class='fw-you'>￥{{item.sellPrice}}</text>
+              </view>
+              <view style='color:#999;font-size:22rpx'>批发:
+                <image class='fw-c-you' src='/image/wh.png'></image>
+              </view>
+            </block>
+          </block>
+        </view>
+      </view>
+      <!-- <view> <view class='button'>购买过的店</view></view> -->
+    </view>
+  </view>
+</scroll-view>

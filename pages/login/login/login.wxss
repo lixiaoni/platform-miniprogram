@@ -1,0 +1,25 @@
+
+page{width:100%;height:100%}
+.login{background:rgba(0,0,0,.3);height:100%;width:100%;position:fixed;z-index:999}
+.login-model{z-index:99999;font-size:30rpx;height:853rpx;width:610rpx;position:fixed;top:60rpx;left:0;right:0;margin:auto;background:#fff;border-radius:5px;padding:30rpx 50rpx}
+.login-title-box{display:flex;justify-content:space-between;align-items:flex-end;margin:30rpx 0}
+.login-title-text{font-size:50rpx;font-weight:600}
+.login-tip-box{margin-bottom:60rpx}
+.login-icon{margin-right:18rpx;width:26rpx;height:31rpx}
+.login-box{display:flex;justify-content:space-between;border-bottom:2rpx solid  #ddd;height:100rpx;align-items:center}
+.code-box{width:370rpx;height:100rpx;border-bottom:2rpx solid  #ddd;display:flex;align-items:center}
+.get-code{border-color:#dddddd!important;color:#AD2325!important;width:225rpx!important;font-size:30rpx!important;margin:0!important;border-radius:0;line-height:100rpx;height:100rpx}
+.pass-img{width:37rpx;height:25rpx;margin-top:20rpx}
+.login-register{margin:60rpx 0}
+.loginBtnDis{background:#eee;color:#aaa;font-weight:600;font-size:30rpx}
+.loginBtnAc{background:#AD2325;color:#fff;font-weight:600;letter-spacing:25rpx;font-size:30rpx}
+.user-agreement{margin-top:50rpx;text-align:center}
+.close-btn{position:fixed;top:1011rpx;left:0;right:0;width:62rpx;height:62rpx;margin:auto}
+.flex-box{display:flex;justify-content:space-between;align-items:center}
+.padding-box{padding:25rpx 0}
+.btn{height:100rpx;text-align:center;border-radius:5px;line-height:100rpx}
+.text-yellow{color:#AD2325}
+.text-xs{font-size:24rpx}
+.text-sm{color:#8c8c8c;font-size:26rpx}
+.text-underline{text-decoration:underline}
+.pre-input{color:#999}

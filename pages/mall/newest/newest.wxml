@@ -1,0 +1,101 @@
+<login id="login"></login>
+<view class="goods-ser">
+  <navigator url='../search/search'>
+    <input placeholder="搜索商品或小云店" disabled='disabled' value="{{value}}" />
+    <view class='goods-ser-right'>搜索</view>
+  </navigator>
+  <image class="home-ser" src="/image/search1.png"></image>
+</view>
+<swiper class="swiper" indicator-dots="true" autoplay="true" interval="10000" duration="500">
+  <block wx:for="{{movies}}" wx:key="{{index}}">
+    <swiper-item>
+      <image src="{{baseUrl}}{{item.imageUrl}}" class="slide-image" mode="widthFix" />
+    </swiper-item>
+  </block>
+</swiper>
+<view class='f-class'>
+  <navigator wx:for="{{classData}}" wx:key="{{index}}" url='/pages/mall/seaList/seaList?categoryCode={{item.categoryCode}}' wx:if='{{index<9}}'>
+    <image src="{{baseUrl}}{{item.imageUrl}}" mode="widthFix" />
+    <view>{{item.name}}</view>
+  </navigator>
+  <navigator url='../class/class'>
+    <image mode="widthFix" src="/image/yjian.png"></image>
+    <view>全部分类</view>
+  </navigator>
+</view>
+<view class='nt-title'>
+  <view>
+    <navigator url='../store/store'>
+      <view><image mode="widthFix" src="/image/store.png"></image></view>
+      <text>Cloud Store</text>
+    </navigator>
+    <image src="/image/mx.png"></image>
+  </view>
+  <view>
+    <navigator  url="../moreStore/moreStore?index=0&name=发现新店">
+       <view><image mode="widthFix" src="/image/find.png"></image></view>
+      <text>Found Store</text>
+      <view></view>
+    </navigator>
+  </view>
+</view>
+<block wx:for="{{youLifeRecommendGoodThings}}" wx:key='{{index}}'>
+  <view class='n-tj'>
+    <view class='n-tj-1'>
+      <view>{{item.name}}</view>
+    <view>{{item.desc}}</view>
+    <view>
+      <view></view>
+      <button bindtap='findGoods' class='n-tj-button'>查看更多</button>
+      <view></view>
+    </view>
+    </view>
+    <!-- <view class='n-down'></view> -->
+  </view>
+  <image mode="widthFix"  src="{{baseUrl}}{{item.imageUrl}}" class='backFd'></image>
+  <view class='n-tj-goods'>
+    <view>
+      <view wx:for="{{item.goodsList}}" wx:key='{{index}}' wx:if='{{index<3}}'>
+        <view class='miniDetails' data-store-nature='{{item.storeVO.storeNature}}' data-store-id='{{item.storeId}}' data-goods-id='{{item.id}}' bindtap='toMiniProgram'></view>
+        <image mode="widthFix" src="{{baseUrl}}{{item.mainImgUrl}}"></image>
+        <view>{{item.name}}</view>
+        <text>￥{{item.sellPrice}}</text>
+      </view>
+    </view>
+  </view>
+</block>
+<view class='lw-pop n-lw-pop' wx:for="{{mallChosenGoods}}" wx:key="{{index}}">
+  <view class='common-flex-between'>{{item.name}}
+    <text data-index='{{index}}' bindtap='moreList'>More</text>
+  </view>
+  <view>{{item.desc}}</view>
+  <view class='fw-cont'>
+    <view wx:for="{{item.goodsList}}" wx:key="{{index}}" wx:if="{{index<4}}">
+      <view class='miniDetails' data-store-nature='{{item.storeVO.storeNature}}' data-store-id='{{item.storeId}}' data-goods-id='{{item.id}}' bindtap='toMiniProgram'></view>
+      <view class='fw-c-img fw-c-img1'>
+        <image mode="widthFix" src='{{baseUrl}}{{item.mainImgUrl}}?x-oss-process=style/goods-small'></image>
+      </view>
+      <view style='line-height:35rpx;margin-bottom:10rpx;height:70rpx;margin:0 20rpx;'>{{item.name}}</view>
+      <block wx:if='{{item.storeVO.storeNature==2}}'>
+        <view class='ys-font'>零售：<text>￥{{item.sellPrice}}</text></view>
+        <view class='v-height'>批发</view>
+      </block>
+      <block wx:if='{{item.storeVO.storeNature==1}}'>
+        <block wx:if='{{item.isPurchaser}}' class='new_left'>
+          <view style='color:#999;font-size: 22rpx;margin: 0 20rpx;'>零售：
+            <text class='ys-font-line' style='color:#999;'>￥{{item.sellPrice}}</text>
+          </view>
+          <view class='ys-font ys-font-l'>批发：
+            <text>￥{{item.wholesalePrice}}</text>
+          </view>
+        </block>
+        <block wx:else>
+          <view class='ys-font'>零售：<text>￥{{item.sellPrice}}</text></view>
+          <view class='ys-font-l' style='color:#999;;font-size: 22rpx;'>批发：
+            <image class='fw-c-you' src='/image/wh.png'></image>
+          </view>
+        </block>
+     </block>
+    </view>
+  </view>
+</view>

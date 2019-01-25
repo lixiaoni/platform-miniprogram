@@ -1,0 +1,4 @@
+@import '../newest/newest';
+.goods-ser input{width: 70%;z-index:1}
+.init-page image{width: 35rpx;height: 35rpx;}
+.init-page  .title  image {position: relative;width: 140rpx;top: 0;left: 0}

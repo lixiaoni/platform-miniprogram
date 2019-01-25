@@ -1,0 +1,41 @@
+@import '../newest/newest';page{background:#ffffff}
+.goods-ser{padding:20rpx 30rpx;background:#F7F7F7;}
+.home-ser{top:35rpx;left:60rpx}
+.home-ser1{left:87%;width:40rpx;height: 40rpx;top: 40rpx;}
+.miniDetails{left:0}
+.goods-ser>view{background:#fff;border-radius:10rpx}
+.swiper-tab{width:100%;margin-top:-9rpx;text-align:center;background:#fff;line-height:80rpx;padding-top: 10rpx}
+.swiper-tab-item{font-size:28rpx;display:inline-block;width:33.33%;color:#666;position:relative}
+.swiper-tab-item image{width:25rpx;vertical-align:middle;margin-left:5rpx;height:25rpx}
+.on{color:#AD2325;position:relative}
+.on view:last-child{height:2rpx;width:80rpx;background:#AD2325;left:50%;margin:0 auto}
+.st-cont{position:relative;padding-left:335rpx;color:#333;min-height:290rpx;font-size:28rpx;padding-right:30rpx;padding-top:30rpx;width:65%;background:#fff;border-radius:10rpx}
+.st-cont image{height:260rpx;width:260rpx;left:45rpx;position:absolute}
+.st-d-status{margin-top:10rpx}
+.st-details{position:absolute;bottom: 20rpx}
+.st-d-status view{margin-bottom:5rpx;}
+.st-d-status view text{color:#666;font-size:26rpx}
+.st-d-status view text.st-mom1{color: #333;}
+.st-d-t{width:390rpx;text-overflow:-o-ellipsis-lastline;overflow:hidden;text-overflow:ellipsis;display:-webkit-box;-webkit-line-clamp:2;line-clamp:2;margin-bottom:40rpx;-webkit-box-orient:vertical;height: 80rpx;}
+.st-d-status view text.st-mom{color:#C79359}
+.st-d-status image{width:30rpx;height:30rpx;vertical-align:middle;position:relative;left:10rpx}
+.sl-font{color:#666;font-size:28rpx;text-align:center;margin-bottom:50rpx;margin-top:10rpx}
+.sort-c{z-index:1000;position:relative}
+.top-p{position:absolute;width:0;z-index:100;height:0;top:33rpx;left:158rpx;border-left:7rpx solid transparent;border-right:7rpx solid transparent;border-bottom:10rpx solid #BBBBBB}
+.up-p{width:0;top:45rpx;left:158rpx;height:0;position:absolute;z-index:100;border-left:7rpx solid transparent;border-right:7rpx solid transparent;border-top:10rpx solid #BBBBBB}
+.up-p1{border-top:10rpx solid #333}
+.top-p1{border-bottom:10rpx solid #333}
+.goods-ser input{width: 67%;}
+.st-d-status>view:last-child{font-size: 26rpx;}
+.st-d-status .ser-font{color: #333;font-size:24rpx;}
+.st-d-status .ser-font text{color: #AD2325;font-size:24rpx;}
+.st-d-status .ser-font-9,.st-d-status .ser-font-9 text{color: #999;font-size:22rpx;}
+.st-d-status .ser-font-line text{text-decoration:line-through}
+.st-cont-s{width:365rpx;margin-bottom: 40rpx;display: inline-block;margin-top: 20rpx;position: relative;float:left;height:550rpx}
+.st-cont-s:nth-child(even){float: right}
+.st-cont-s image{width:365rpx;height:365rpx;}
+.st-cont-s .st-d-t{font-size: 26rpx;padding:0 20rpx;margin-top: 10rpx;margin-bottom:20rpx;width:325rpx;word-break: break-all}
+.st-style{position: relative;padding-left: 20rpx;}
+.st-cont-s .st-style image{width:40rpx;height:40rpx;vertical-align:middle;position:relative;left:10rpx}
+.st-cont-s .v-city{bottom: 0rpx;right: 20rpx}
+.goods-ser>view:first-child{width: 91%}

@@ -1,0 +1,111 @@
+/* pages/cloudOrder/newCloud/newCloud.wxss */
+.box{
+  padding: 20rpx;
+  background: #fff;
+}
+.login-top{
+  text-align: right;
+  font-size: 24rpx; 
+}
+.title-box{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.big-title{
+  font-size: 50rpx;
+  margin-bottom: 20rpx;
+}
+.s-title{
+  color: #999;
+}
+/* 选择键 */
+.cloud-box{
+  display: flex;
+  justify-content: space-between;
+}
+.cloud-box>view{
+  width: 24%;
+  border: 1rpx solid #dedede;
+  display: flex;
+  flex-direction: column;
+  font-size: 26rpx;
+  text-align: center;
+  padding: 50rpx 0 30rpx;
+  border-radius: 10rpx;
+  color: #333;
+}
+  .cloor-box{
+    width: 60rpx;
+    height: 60rpx;
+    margin: 0 auto 50rpx;
+    background: #82afe6;
+    border-radius: 10rpx;
+  }
+  .box-ac{
+    background: #eee;
+  }
+/* 价格 */
+.cloud-price{
+  margin-top: 10rpx;
+  padding: 50rpx;
+  background: #eee;
+  border: 1rpx solid #dedede;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}  
+  .cloud-title{
+    font-size: 40rpx;
+    font-weight: 600;
+
+  }
+  .cloud-tip{
+    color: #999;
+    font-size: 24rpx;
+  }
+  .buy-button{
+    margin-top: 80rpx;
+    background: #fff;
+    width: 100%;
+    border: 1rpx solid #333;
+  }
+  .s-font{
+    font-size: 24rpx;
+  }
+  .price-font{
+    font-size: 50rpx;
+  }
+/* 介绍 */
+.cloud-introduce{
+  padding: 30rpx 0 50rpx;
+  border: 1rpx solid #dedede;
+  border-top: 0;
+  
+}
+.introduce-tab{
+  display: flex;
+  justify-content: space-around;
+}
+.tab-ac{
+  border-bottom: 4rpx solid orange;  
+}
+.advantage{
+  padding: 20rpx 50rpx;
+  display: flex;
+  justify-content: space-between;
+  font-size: 26rpx;
+}
+/* 客服 */
+.wxkf{
+  border: 1rpx solid #dedede;
+  padding: 20rpx 50rpx;
+  margin:10rpx 0;  
+  display: flex;
+  justify-content: space-between;
+  font-size: 24rpx;
+}
+.right-icon{
+  height: 26rpx;
+  width: 26rpx;
+}

@@ -1,0 +1,10 @@
+@import '../common/common';
+.shop-cont view.nView{
+  padding-bottom: 0;
+}
+.shop-cont1{
+  margin-bottom: 0;
+}
+.shop-cont view.nView{
+  padding-top: 0
+}

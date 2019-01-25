@@ -1,0 +1,15 @@
+<view class="goods-ser">
+    <navigator url='../search/search'><input placeholder="搜索商品" disabled='disabled' value="{{value}}"/></navigator>
+    <image class="home-ser"  src="/image/search1.png"></image>
+</view>
+<view class='cl-cont'>
+  <view class='cl-left'>
+    <view wx:for='{{firstCodeList}}'  wx:key="{{index}}" class='{{index==0?"active":""}}' data-id="{{item.id}}" data-code='{{item.categoryCode}}' class='{{current==index?"active":""}}' data-current="{{index}}"  bindtap="swichNav">{{item.name}}</view>
+  </view>
+  <view class='cl-right'>
+    <view wx:for='{{twoList}}'  wx:key="{{index}}">
+      <view class='active' data-code='{{item.categoryCode}}' data-name='{{item.name}}'><text class='gold-border padding-box'></text>{{item.name}}<text class='gold-border padding-box'></text></view>
+      <view class='padding-left' wx:for='{{item.subGoodsCategoryList}}'  wx:key="{{index}}"  bindtap='serList' data-code='{{item.categoryCode}}' data-name='{{item.name}}'>{{item.name}}<image  src='/image/mallr.png'></image></view>
+    </view>
+  </view>
+</view>

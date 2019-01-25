@@ -1,0 +1,63 @@
+export const mallIndexUrl = '/api/index/{{owner}}'
+export const goodsSerUrl ='/api/youlife/goods'
+export const storeLookUrl = '/api/youlife/{{owner}}/chosen/store'
+export const favoriteUrl='/api/shop/user/favorite/store'
+export const firstCodeUrl='/api/shop/category/sublist/first'
+export const childCategoryCodeUrl='/api/shop/category/sublist/{{parentCategoryCode}}'
+export const storeSerListUrl ='/api/youlife/store'
+export const floorStoreUrl='/api/floor/threelevellist/{{owner}}'
+export const addressListUrl = '/api/user/address/list'
+export const addressDeleteUrl = '/api/user/address/{{id}}'
+export const removeDefaultUrl = '/api/user/address/cancel/{{id}}'
+export const addressInfoUrl = '/api/user/address/info/{{id}}'
+export const addressDefaultUrl = '/api/user/address/default/{{id}}'
+export const saveAddressUrl = '/api/user/address/save'
+export const editAddressUrl = '/api/user/address/update'
+export const newsUrl ='/api/youlife/store/news'
+export const workIndexUrl ='/admin/mall/store/index'
+export const superAdminWorkUrl='/admin/mall/store/{{owner}}/index'
+export const isAdminUrl ='/api/profile/relation/{{owner}}'
+export const identityUserUrl ='/api/user/byuserid'
+export const adminMallStoreListUrl = "/admin/mall/store/super/storelist"
+export const purchaserStoreUrl = '/api/user/purchaser/store'
+export const resetPasswordUrl = "/oauth/user/resetpassword"
+export const phoneMessageUrl = "/oauth/code/sms"
+export const registerUrl = "/oauth/user/register"
+export const quitUrl = "/oauth/authentication/removetoken"
+export const updataPwdUrl = "/oauth/authentication/changepassword"
+export const registerPhoneMsgUrl = "/api/smsCode"
+export const userFloorInfoUrl = "/admin/floor/malluser/userfloor/login"
+export const changeIconUrl = "/api/user/headpic"
+export const floorListUrl = "/admin/floor/balcony/{{owner}}"
+// 批发商管理
+export const indexUrl = '/admin/purchasermerchant/index'
+export const mewWholesalerUrl = '/admin/bizfriend/merchantapply'
+export const setNameUrl = '/admin/purchasermerchant/remark/{{storeId}}/{{remark}}'
+export const addWholesalerUrl = '/admin/bizfriend/merchantapply'
+export const passUrl = '/admin/bizfriend/acceptpurchaser'
+export const wholesalerAllUrl = '/admin/purchasermerchant/merchants'
+export const serWholesalerListUrl = '/admin/purchasermerchant/merchantlist'
+export const acceptmerchantUrl = '/admin/bizfriend/acceptmerchant'
+export const purchaserUserIdUrl = '/admin/store/merchantinfo/{{storeId}}/{{purchaserUserId}}'
+export const applyinfoUrl = '/admin/store/applyinfo/{{storeId}}/{{purchaserUserId}}'
+export const isFriendUrl = '/admin/merchantpurchaser/{{storeId}}/purchaser/{{userId}}'
+export const apiSetUserUrl = '/api/user/set'
+export const apiAddUserUrl = '/api/user/set/bfpripermission'
+export const showPurchaserUrl = '/admin/bizscan/purchaser/{{userId}}'
+export const isFriendStoreUrl = '/admin/purchasermerchant/{{storeId}}/merchant'
+export const cloudOrderDetailUrl = '/api/yunstore/order/{{orderNumber}}'
+export const floorStoreListUrl = "/admin/mall/store/{{floorCode}}/store"
+export const floorAdminStoreListUrl = "/admin/mall/store/{{userId}}/storelist"
+// 订单
+export const cancelOrderUrl = "/api/order/{{orderNumber}}/cancel"
+export const getPaymentImgUrl = "/admin/store/receiptcode/{{storeId}}"
+export const uploadPayVoucherUrl = "/api/order/orderpayment/{{orderNumber}}/uploadpayvoucher"
+export const orderListUrl ='/api/order/user/youlife/ordercategory/{{orderCategory}}/orderstatus/{{orderStatus}}'
+export const deleteOrderUrl ='/api/order/{{orderNumber}}'
+export const receiveOrderUrl='/api/order/{{orderNumber}}/receive'
+//订单详情
+export const orderDetailUrl = "/api/order/byordernumber/{{orderNumber}}";
+// 支付凭证
+export const seeVoucherUrl = "/api/order/orderpayment/{{orderNumber}}"
+// 查询好物
+export const findGoodsUrl='/api/youlife/config/{{owner}}/recommend/good/things'

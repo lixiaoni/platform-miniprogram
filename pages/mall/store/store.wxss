@@ -1,0 +1,35 @@
+@import '../follow/follow';.fw-store .button{color:#999;font-size:24rpx;height:35rpx;background:#F5F5F5;border-radius:10rpx;margin-top:20rpx;display:inline-block;line-height:35rpx;padding:0 10rpx;margin-right:10rpx}
+.fw-store .button:nth-child(2){color:#CCAA77}
+.goods-ser input{width:70%}
+.fw-store{position:relative}
+.fw-store .fw-logo{top:10rpx}
+.st-ser .fw-title{height:90rpx}
+.fw-title-active{position:fixed;z-index:99999;width:100%;top:0}
+.st-ser .fw-title>view{font-size:30rpx;font-weight:bold;padding-top:56rpx;display:inline-block;width:auto;margin-right:20rpx;margin-left:20rpx}
+.st-ser{position:fixed;width:100%;z-index:9999;background:#fff;padding-bottom:80rpx;height:100%;background:rgba(0,0,0,0.5);top:0;padding-top:40rpx}
+.fw-title>view.active view{border-bottom:4rpx solid #CCAA77;padding-bottom:10rpx}
+.st-ser-cont>view{display:inline-table;width:45%;font-size:28rpx;height:450rpx;overflow:scroll}
+.st-ser-cont,.show-floor{padding-top:30rpx;background:#fff}
+.show-floor{text-align:center;padding-bottom:30rpx;color:#CCAA77}
+.st-ser-cont>view view{padding-left:60rpx;height:85rpx;line-height:85rpx}
+.st-ser-cont>view.ser-left{width:55%;background:#F5F5F5;height:450rpx;overflow:scroll}
+.st-ser-cont>view.ser-left .active{background:#fff}
+.st-ser-cont>view.ser-right view:first-child{color:#CCAA77}
+.st-hide{position:fixed;height:100%;width:100%;background:rgba(0,0,0,0.5);top:0;z-index:100}
+.st-ser  .fw-title{height:140rpx;display:flex;justify-content:space-around}
+.fw-title1>view.active view{width:auto}
+.fw-title{height:70rpx;padding-top:17rpx;box-sizing:border-box}
+.goods-ser{height:100rpx}
+.fw-iew1{display:flex;align-items:center;width: 95%;margin-bottom: 7rpx}
+.fw-store .fw-logo{top:10rpx}
+.fw-store{padding:40rpx 30rpx}
+.fw-top view.fw-iew1 text{height:34rpx;line-height:34rpx}
+.fw-top view.fw-iew1 text:nth-child(2){width: unset}
+.fw-c-img{margin-bottom:20rpx}
+.fw-top view.fw-iew{padding-right:47rpx}
+.fw-store .fw-left{position:absolute;right:0;top:58rpx;margin:0}
+page{height:unset;padding-bottom:80rpx}
+.ym-nav{width: 100%;height: 90rpx;overflow-x: scroll;overflow-y: hidden;white-space:nowrap;font-size: 28rpx;line-height: 90rpx;background: #fff;}
+.ym-nav text{margin:0 20rpx;border-bottom: 4rpx solid #fff;padding-bottom: 22rpx}
+.ym-nav text.t-active{border-bottom: 4rpx solid #BB494A;color: #BB494A;font-size: 30rpx;}
+.ym-nav text:first-child{margin-left: 60rpx}

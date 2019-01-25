@@ -1,0 +1,5 @@
+.ser-font{left: 88%;}
+.search-input{height:100rpx;background:#fff;border-radius:0;border:0;margin-top:20rpx;padding-left:30rpx}
+.up-em{top:50rpx;right:30rpx;position:absolute;width:40rpx;height:40rpx}
+.up-save{height:122rpx;line-height:122rpx;font-size:34rpx;text-align:center;background:#fff;position:fixed;bottom:0;width:100%;color: #ccaa77;}
+.section-input{height:8%;background:#F4F4F4;padding:16rpx;display:flex;position:fixed;bottom:0;width:100%;box-sizing:border-box}

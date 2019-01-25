@@ -1,0 +1,85 @@
+<view wx:if='{{categoryCodeShow}}' class="goods-ser">
+  <view url='../search/search'>
+    <input placeholder="请输入搜索关键词" bindinput='changeInput' bindconfirm="searchBtn" value="{{value}}" />
+  </view>
+  <image class="home-ser" src="/image/search1.png"></image>
+  <image class="home-ser home-ser1" wx:if='{{emptyVal}}' style='left:71%' src="/image/ser.png" bindtap='emptyVal'></image>
+  <image class="home-ser home-ser1"  style='left:90%;width:50rpx;height:50rpx' src="/image/style.png" bindtap='changeStyle'></image>
+  <view class='goods-ser-right' style='top:36rpx;right:110rpx' bindtap="searchBtn">搜索</view>
+</view>
+<view wx:if='{{categoryCodeShow}}' class="swiper-tab">
+  <view class="swiper-tab-item {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">默认
+    <view></view>
+  </view>
+  <view class="swiper-tab-item {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">销量
+    <view></view>
+  </view>
+  <view class="swiper-tab-item {{currentTab==2 ? 'on' : ''}}" data-current="2" bindtap="swichNav">价格
+    <view class='top-p' wx:if='{{priceShow}}'></view>
+    <view class='top-p' wx:if='{{!priceShow && currentTab!=2}}'></view>
+    <view class='top-p top-p1' wx:if='{{!priceShow && currentTab==2}}'></view>
+    <view class='up-p' wx:if='{{!priceShow}}'></view>
+    <view class='up-p up-p1' wx:if='{{priceShow}}'></view>
+    <view></view>
+  </view>
+</view>
+<scroll-view scroll-y="true" style="height:100%;" class='scroll' bindscrolltolower="bindDownLoad">
+  <view class="st-cont" wx:if='{{styleShow}}' wx:for="{{goodsList}}" wx:key="index">
+    <view class='miniDetails' data-store-nature='{{item.storeVO.storeNature}}' data-store-id='{{item.storeId}}' data-goods-id='{{item.id}}' bindtap='toMiniProgram'></view>
+    <image class="cart-thumb" src="{{baseUrl}}{{item.mainImgUrl}}?x-oss-process=style/goods-small"></image>
+    <view class='st-d-t'>{{item.name}}</view>
+    <view class='st-details'>
+      <view class='st-d-status'>
+        <block wx:if='{{item.storeVO.storeNature==2}}'>
+          <view class='ser-font'>零售：￥{{item.sellPrice}}</view>
+        </block>
+        <block wx:if='{{item.storeVO.storeNature==1}}'>
+          <view wx:if='{{item.isPurchaser}}'>
+            <view class='ser-font-9 ser-font-line'>零售：
+              <text>￥{{item.sellPrice}}</text>
+            </view>
+            <view class='ser-font'>批发：￥{{item.wholesalePrice}}</view>
+          </view>
+          <view wx:else>
+            <view class='ser-font'>零售：￥{{item.sellPrice}}</view>
+            <view class='ser-font-9'>批发：
+              <image src='/image/wh.png'></image>
+            </view>
+          </view>
+        </block>
+        <view>{{item.storeVO.name}}
+          <image src='/image/mallr.png'></image>
+        </view>
+      </view>
+    </view>
+    <view class='v-city'>{{item.storeVO.city==null?'':item.storeVO.city}}</view>
+  </view>
+  <view class="st-cont-s" wx:if='{{!styleShow}}'  wx:for="{{goodsList}}" wx:key="index">
+    <view class='miniDetails' data-store-nature='{{item.storeVO.storeNature}}' data-store-id='{{item.storeId}}' data-goods-id='{{item.id}}' bindtap='toMiniProgram'></view>
+    <image src="{{baseUrl}}{{item.mainImgUrl}}?x-oss-process=style/goods-small"></image>
+    <view class='st-d-t'>{{item.name}}</view>
+    <view class='st-style'>
+      <view class='st-d-status'>
+        <block wx:if='{{item.storeVO.storeNature==2}}'>
+          <view class='ser-font'>零售：￥{{item.sellPrice}}</view>
+        </block>
+        <block wx:if='{{item.storeVO.storeNature==1}}'>
+          <view wx:if='{{item.isPurchaser}}'>
+            <view class='ser-font-9 ser-font-line'>零售：
+              <text>￥{{item.sellPrice}}</text>
+            </view>
+            <view class='ser-font'>批发：￥{{item.wholesalePrice}}</view>
+          </view>
+          <view wx:else>
+            <view class='ser-font' style='font-size:26rpx'>零售：￥{{item.sellPrice}}</view>
+            <view class='ser-font-9'>批发：
+              <image src='/image/wh.png'></image>
+            </view>
+          </view>
+        </block>
+      </view>
+      <view class='v-city'>{{item.storeVO.city==null?'':item.storeVO.city}}</view>
+    </view>
+  </view>
+  <!-- <view class='sl-font'>没有更多了</view> -->
+</scroll-view>

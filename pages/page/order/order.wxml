@@ -1,0 +1,145 @@
+<login id="login"></login>
+<!-- 确认收货 -->
+<mes show="{{sureModal}}">
+  <view>
+    <text>是否确认收货？</text>
+    <button bindtap='sureSure'>确定</button>
+  </view>
+</mes>
+<!-- 删除订单 -->
+<mes show="{{delModal}}" bind:sureSelectArea="sureSelectAreaListener">
+  <view>
+    <text>确认删除订单？</text>
+    <button bindtap='sureDel'>确定</button>
+  </view>
+</mes>
+<!-- 售后服务 -->
+<mes show="{{afterModal}}" bind:sureSelectArea="sureSelectAreaListener">
+  <view>
+    <text>如有疑问，请咨询客服人员</text>
+    <view class='mes-tel'>{{afterTel?afterTel:"无"}}</view>
+  </view>
+</mes>
+<!-- 取消订单 -->
+<clo show="{{cancelModal}}">
+  <view class='layer-reason-item' wx:for='{{reason}}' wx:key='{{index}}' data-current="{{index}}" bindtap='swichReason'>
+    <icon wx:if="{{item.selected}}" type="success" color="#AD2325" data-index="{{index}}" size='18' class="cart-pro-select" />
+    <icon wx:else type="circle" class="cart-pro-select" size='18' data-index="{{index}}" /> {{item.title}}
+  </view>
+  <button class='layer-reason-btn' bindtap='sureCancel'>确定</button>
+</clo>
+<!-- 获取取件码 -->
+<mes show="{{codeModal}}">
+  <view>
+    <text>取货码</text>
+    <view class='mes-tel1'>{{codeNum}}</view>
+    <view class='mes-text'>请您安排好时间，在营业时间内到店取货</view>
+  </view>
+</mes>
+
+<!-- 付款码 -->
+<savePayment show='{{paymentModal}}' com-name='{{paymentItem.storeInfo.storeName}}' wx='{{paymentItem.storeInfo.wechatNumber}}' goodsName='{{paymentItem.goodsInfoList[0].goodsName}}' goods-num="{{paymentItem.num}}" price="{{paymentItem.orderAmount}}"
+  head="{{paymentItem.storeInfo.logo?baseUrl+paymentItem.storeInfo.logo:''}}"></savePayment>
+
+<view class='od-status'>
+  <view wx:for='{{nav}}' wx:key='{{index}}' class="od-view {{index==navindex?'active':''}}" data-current="{{index}}" bindtap='swichNav'>
+    <view></view>{{item.title}}</view>
+</view>
+<view wx:if="{{showList.length>0}}">
+  <view class='cf-cont' wx:for="{{showList}}" wx:key="{{index}}">
+    <view style="position:relative;" class='c-title' data-status='{{item.orderStatus}}' data-type='{{item.logisticsMode}}' data-num="{{item.orderNumber}}">
+      <image src="/image/ic1.png"></image> {{item.storeInfo.storeName}}
+      <image class='itimg' src="/image/icl.png"></image>
+      <view class='order-zt' wx:if="{{item.logisticsMode==1}}">自提</view>
+      <view bindtap="onChangeShowState">
+        <text wx:if="{{item.orderStatus=='unpaid' && item.payVoucher}}">待确认</text>
+        <text wx:if="{{item.orderStatus=='unpaid' && !item.payVoucher}}">待付款</text>
+        <text wx:if="{{item.orderStatus=='wait_deliver' && item.logisticsMode==2}}">待发货</text>
+        <text wx:if="{{item.orderStatus=='delivered' && item.logisticsMode==2 }}">待收货</text>
+        <text wx:if="{{item.orderStatus=='delivered' && item.logisticsMode==1}}">待取货</text>
+        <text wx:if="{{item.orderStatus=='canceled' }}">交易关闭</text>
+        <text wx:if="{{item.orderStatus=='finish' }}">交易成功 </text>
+      </view>
+      <view class='miniDetails' data-store-nature='{{item.storeInfo.storeNature}}' data-store-id='{{item.storeInfo.storeId}}' bindtap='toMiniProgram'></view>
+    </view>
+    <view bindtap='toOrderDetail' data-status='{{item.orderStatus}}' data-type='{{item.logisticsMode}}' data-num="{{item.orderNumber}}">
+      <view class="cart-box">
+        <view class="cart-list" wx:for="{{item.goodsInfoList}}" wx:key="{{index}}">
+          <view class="cart-thumb">
+            <image class='goods-icon' mode="aspectFit" src="{{item.mainImgUrl?baseUrl+item.mainImgUrl+'?x-oss-process=style/goods-small':''}}"></image>
+          </view>
+          <view class='ct-text ct-text1'>￥{{item.goodsSkuInfoVOList.unitPrice}}
+            <view>x {{item.goodsSkuInfoVOList.num}}</view>
+          </view>
+          <view class='ct-title ct-title1'>{{item.goodsName}}</view>
+          <text class="cart-pro-name">规格：{{item.goodsSkuInfoVOList.goodsDesc}}</text>
+        </view>
+      </view>
+    </view>
+    <view class='cf-button'>
+      <!-- <block wx:if="{{item.orderStatus=='unpaid'}}">
+        <view class='or-time'>距订单取消
+          <text>00:30:00</text>
+        </view>
+      </block> -->
+      <view class='or-text'>共
+        <text class='or-font1'>{{item.num}}</text>件商品
+        <text class='or-font2'>合计：</text>
+        <text class='or-font3'>￥{{item.orderAmount}}</text>
+      </view>
+
+      <!-- 待支付 -->
+      <block wx:if="{{item.orderStatus=='unpaid'}}">
+        <button wx:if="{{hasPayImg}}" class='or-active' bindtap='showModal' data-index="{{index}}" data-type="payment">付款码</button>
+        <navigator url='../../role/supplyVoucher/supplyVoucher?num={{item.orderNumber}}'>
+          <button wx:if="{{!item.payVoucher}}" class='or-active'> 上传付款凭证 </button>
+          <button wx:else class='or-active'> 再次上传凭证 </button>
+        </navigator>
+        <button bindtap='showModal' data-type='cancel' data-num="{{item.orderNumber}}">取消订单</button>
+      </block>
+      <!-- 已支付 -->
+      <block wx:if="{{item.orderStatus=='wait_deliver' && item.logisticsMode==2}}">
+        <button class='or-active'>提醒发货</button>
+        <button wx:if="{{item.payVoucher}}" bindtap='seeVoucher' data-num="{{item.orderNumber}}">付款凭证</button>
+      </block>
+
+      <!-- 已发货 -->
+      <block wx:if="{{item.orderStatus=='delivered' && item.logisticsMode==1}}">
+        <button class='or-active' bindtap='showModal' data-type='code' data-code="{{item.claimGoodsNum}}"> 取货码 </button>
+        <button wx:if="{{item.payVoucher}}" bindtap='seeVoucher' data-num="{{item.orderNumber}}">付款凭证</button>
+      </block>
+
+      <block wx:if="{{item.orderStatus=='delivered' && item.logisticsMode==2}}">
+        <button class='or-active' data-num='{{item.orderNumber}}' data-type='get' bindtap='showModal'> 确认收货 </button>
+        <button wx:if="{{item.payVoucher}}" bindtap='seeVoucher' data-num="{{item.orderNumber}}">付款凭证</button>
+        <!-- <button>查看物流</button> -->
+      </block>
+
+      <!-- 已收货_已完成 -->
+      <block wx:if="{{item.orderStatus=='finish' && item.logisticsMode==2}}">
+        <button class='or-active' data-type='after' data-tel="{{item.storeInfo.servicePhone}}" bindtap='showModal'> 客服电话 </button>
+        <!-- <button>查看物流</button> -->
+        <button wx:if="{{item.payVoucher}}" bindtap='seeVoucher' data-num="{{item.orderNumber}}">付款凭证</button>
+        <button data-index='{{index}}' data-type='del' data-num='{{item.orderNumber}}' bindtap='showModal'>删除订单</button>
+      </block>
+
+      <block wx:if="{{item.orderStatus=='finish' && item.logisticsMode==1}}">
+        <button class='or-active' data-type='after' data-tel="{{item.storeInfo.servicePhone}}" bindtap='showModal'> 客服电话 </button>
+        <button wx:if="{{item.payVoucher}}" bindtap='seeVoucher' data-num="{{item.orderNumber}}">付款凭证</button>
+        <button data-index='{{index}}' data-type='del' data-num='{{item.orderNumber}}' bindtap='showModal'>删除订单</button>
+      </block>
+
+      <!-- 订单取消 -->
+      <block wx:if="{{item.orderStatus=='closed' || item.orderStatus=='canceled'}}">
+        <button wx:if="{{item.payVoucher}}" bindtap='seeVoucher' data-num="{{item.orderNumber}}">付款凭证</button>
+        <button data-index='{{index}}' data-type='del' data-num='{{item.orderNumber}}' bindtap='showModal'>删除订单</button>
+      </block>
+    </view>
+  </view>
+</view>
+<view wx:else class="order-no-data">
+  <view class='nocar'>
+    <image src="/image/no1.png"></image>
+  </view>
+  您还没有相关的订单
+</view>

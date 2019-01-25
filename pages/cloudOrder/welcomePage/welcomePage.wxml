@@ -1,0 +1,60 @@
+  <view class='modal' wx:if="{{layerMobal}}">
+    <view class='close-box'>
+      <image src='/image/clo12.png' bindtap='toUser'></image>
+    </view>
+    <view>您已经是<text class='gold-color'>{{layerText}}</text>小云店</view>
+    <view>店主了哦~</view>
+    <view bindtap='toUser' class='know-btn'>知道了</view>
+  </view>
+  <view class='box'>
+    <view class='img-box'>
+      <image class='mall-img' src='/image/welcome-mall.png'></image>
+      <image class='store-logo' src='/image/welcome-logo.png'></image>
+      <image wx:if="{{introPage}}" class='intro-title-img' src='/image/intro-title-font.png'></image>
+      <image wx:else class='font-img' src='/image/welcome-font.png'></image>
+    </view>
+
+    <view wx:if="{{introPage}}">
+      <view class='text-center intro-des'>实体店的移动数字化，是必然趋势</view>
+      <view class='text-center intro-des'>线上线下融合是实体店经营的必经之路</view>
+      
+      <view class='intro-fen'>
+      <image class='intro-s-img' src="/image/intro-title-left.png"></image>
+      <text>产品介绍</text>
+      <image class='intro-s-img' src="/image/intro-title-right.png"></image>
+      </view>
+      
+      <view class='intor-s-font'>百荣 · 小云店，是优生活互动专为实体店铺打造的移动电商系统，是基于微信生态内设计研发的、店铺链接顾客、店铺链接进货商的智能化移动销售利器</view>
+
+      <view class='pro-item' style='padding-top:60rpx;'>优惠码价：1688元/年  服务费</view>
+      <!-- <view class='pro-item'>赠送：2个月 <text style='font-weight:500;'>（共14个月）</text></view> -->
+      <view class='pro-item'>赠送：价值5980元课程</view>
+      <view class='pro-item' style='padding-left:80rpx;'>《新商业进化10讲》（永久回放）</view>
+      <!-- <view class='pro-item-s'>注：2019年1月1日后，价格将升为1688元。</view> -->
+
+
+
+      <view bindtap='loginBuy' class='buy-btn'>我要入驻</view>
+      <view class='goStore' bindtap='toHome'>逛逛商贸云</view>
+    </view>
+
+
+    <view wx:else> 
+      <view class='flex-center input-box border-bottom'>
+        <image class='tel-icon' src='/image/tel-white.png'></image>
+        <input hidden='{{layerMobal}}' bindinput='watchInput' data-type='tel' placeholder-class='pre-input' placeholder='请输入手机号'></input>
+      </view>
+
+      <view class='flex-between input-box'>
+        <view class='flex-center border-bottom' style='height:100%;width:380rpx;'>
+          <image class='pro-icon' src='/image/protect.png'></image>
+          <input bindinput='watchInput' data-type='code' placeholder-class='pre-input' placeholder='请输入验证码'></input>
+        </view>
+        <view class='get-code' bindtap='getCode'>{{buttonTimer}}</view>
+      </view>
+
+      <view bindtap='buy' class='buy-btn'>我要入驻</view>
+      <view class='agreement'>注册即表示您完全同意<navigator url="/pages/login/agreement/agreement" class='agreement-font'>《用户协议》</navigator></view>
+
+    </view>
+  </view>

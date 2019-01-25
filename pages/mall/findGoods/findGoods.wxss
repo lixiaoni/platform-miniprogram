@@ -1,0 +1,6 @@
+@import '../seaList/seaList';
+.n-tj{margin-bottom:30rpx;}
+.n-tj>.n-tj-1>view>view{position: relative}
+.n-tj>.n-tj-1>view view.fd-x{width:130rpx;background:#fff;margin-bottom: 0;margin-left: 20rpx;margin-right: 20rpx;display:inline-block;position: absolute;left: 13%;top: 25rpx;border-top: 0;height: 2rpx}
+.n-tj>.n-tj-1>view view.fd-x1{right: 13%;left: unset;}
+.n-tj .n-tj-1 {width: 100%;margin-left: 0;margin-top:20%}

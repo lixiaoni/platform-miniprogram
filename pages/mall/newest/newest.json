@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "YOULife",
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "login": "../../login/login/login"
+  }
+}

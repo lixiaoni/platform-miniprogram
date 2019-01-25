@@ -1,0 +1,193 @@
+/* pages/cloudOrder/welcomePage/welcomePage.wxss */
+page{
+  background: #981b1f;
+  border:0;
+}
+
+.box{
+  padding:33rpx 72rpx 0;
+  color: #fff;
+}
+
+.img-box{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mall-img{
+  width: 580rpx;
+  height: 68rpx;
+}
+.store-logo{
+  height: 323rpx;
+  width: 580rpx;
+  margin-top: 20rpx;
+  margin-bottom: 30rpx;
+}
+.font-img{
+  height: 140rpx;
+  width: 530rpx;
+  margin-bottom: 5rpx;
+}
+
+/* 输入框 */
+.input-box{
+  height: 100rpx;
+  color: #fff;
+  margin-top: 50rpx;
+  font-size: 32rpx;
+}
+.tel-icon{
+  width: 26rpx;
+  height: 30rpx;
+  margin-left: 4rpx;
+  margin-right: 36rpx;
+}
+.pro-icon{
+  width: 35rpx;
+  height: 31rpx;
+  margin-right: 31rpx;
+}
+.pre-input{
+  color: #fff;
+}
+.border-bottom{
+  border-bottom: 1px solid #ddd;
+}
+.get-code{
+  width:200rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  border: 1px solid #ddd;
+  color: #f2dabd;
+  font-size: 30rpx;
+  margin: 0;
+}
+
+.flex-center{
+  display: flex;
+  align-items: center;
+}
+.flex-between{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.input-icon{
+  height: 30rpx;
+  width: 30rpx;
+}
+
+
+.buy-btn{
+  height: 100rpx;
+  background: #f2dabd;
+  color: #a32224;
+  font-size: 36rpx;
+  line-height: 100rpx;
+  border-radius: 10rpx;
+  text-align: center;
+  margin-top: 70rpx;
+  margin-bottom: 20rpx;
+  font-weight: 600;
+}
+
+.agreement{
+  font-size: 24rpx;
+  color: #fff;
+  text-align: center;
+}
+
+.agreement-font{
+  color: #efd4b7;
+  text-decoration: underline;
+  display: inline;
+}
+
+.modal{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  margin: auto;
+  width: 650rpx;
+  background: #fff;
+  padding: 20rpx 50rpx 70rpx;
+  box-sizing: border-box;
+  border-radius: 10rpx;
+  font-size: 36rpx;
+  text-align: center;
+}
+.close-box {
+  text-align: right;
+  margin-bottom: 10rpx;
+}
+.close-box image{
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.know-btn{
+  width: 400rpx;
+  height: 86rpx;
+  line-height: 86rpx;
+  background: #ca7;
+  color: #fff;
+  border-radius: 10rpx;
+  margin:38rpx auto 0;
+}
+.gold-color{
+  color: #ca7;
+}
+
+/* 介绍页面 */
+.goStore{
+  text-align: center;
+  font-size: 36rpx;
+  color: #f2dabd;
+  text-decoration: underline;
+  padding-bottom: 70rpx;
+}
+.intro-title-img{
+  width:519rpx; 
+  height:87rpx;
+  margin-bottom: 50rpx;
+}
+.intro-fen{
+  font-size: 36rpx;
+  color: #f2dabd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin:80rpx 0 60rpx;
+}
+.text-center{
+  text-align: center;
+}
+.intro-des{
+  font-size: 32rpx;
+  font-weight: 600;
+}
+.intro-s-img{
+  width: 60rpx;
+  height: 20rpx;
+  margin:  0 30rpx;
+}
+.intor-s-font{
+  font-size: 26rpx;
+  text-indent:52rpx; 
+}
+
+.pro-item{
+  margin-left: 60rpx;
+  font-size: 30rpx;
+  font-weight: 600;
+}
+.pro-item-s{
+  font-size: 24rpx;
+  margin-left: 60rpx;
+}

@@ -1,0 +1,39 @@
+.fw-store{background:#fff;margin:20rpx;position:relative;border-radius:10rpx;padding:40rpx 30rpx}
+.fw-store .fw-top{position:relative;font-size:30rpx;font-weight: bold;padding-left:90rpx;margin-top:10rpx}
+.fw-top view.fw-iew{font-size:24rpx;color:#999;padding-right:47rpx}
+.fw-top view.fw-iew text{color:#333;margin-right:20rpx;font-weight: normal}
+.fw-top view.fw-iew text.text{color:#999}
+.fw-top view.fw-iew1 text{border:2rpx solid #AD2325;font-size:24rpx;color:#AD2325;border-radius:8rpx;margin-left:10rpx;height:34rpx;line-height:34rpx;font-weight: normal}
+.fw-top view.fw-iew1 text:first-child{width: 100rpx;text-align: center}
+.fw-top view.fw-iew1 text:nth-child(2){background:#FF5C52;color:#fff;border:0;border-radius: 0;padding: 0 5rpx}
+.fw-store .fw-logo{height:80rpx;width:80rpx;position:absolute;left:0;border-radius:10rpx}
+.lw-pop-cont>view .fw-logo{height:70rpx;width:70rpx;margin:0 auto;padding-bottom:30rpx}
+.lw-pop-cont>view .fw-logo image{max-height:70rpx;max-width:70rpx;border-radius:10rpx}
+.fw-store .fw-left{width:35rpx;height:35rpx;float:right}
+.fw-store .fw-left{position:absolute;right:0;top:58rpx;margin:0}
+.fw-cont{font-size:26rpx;color:#999}
+.fw-cont text{color:#333}
+.fw-cont .fw-you, .fw-cont .ym-font text {color:#AD2325}
+.fw-cont>view{display:inline-block;width:33.3%;margin-top:35rpx;text-align:center}
+.fw-c-img{display:block;margin:0 auto 40rpx;height:200rpx;width:200rpx;border-radius:10rpx;text-align:center}
+.fw-c-img image{max-height:200rpx;max-width:200rpx;border-radius:10rpx}
+.fw-c-you{height:30rpx;width:30rpx;vertical-align:middle;}
+.fw-cont>view view:nth-child(2),.fw-cont>view view:nth-child(3),.fw-cont>view view:nth-child(4){text-align:left}
+.fw-cont>view>view{margin-left:10rpx}
+.fw-no{font-size:48rpx;background:#fff;border-top:2rpx solid #EFEFEF;padding-top:50rpx;padding-left:50rpx;font-weight:bold;padding-bottom:25rpx}
+.fw-no view:last-child{font-size:24rpx;color:#666;font-weight:normal}
+.fw-no view:first-child{line-height:40rpx}
+.fw-no image{width: 500rpx;}
+.lw-pop{padding:35rpx 50rpx;font-size:40rpx;background:#fff}
+.lw-pop>view:first-child{font-weight:bold}
+.lw-pop>view:first-child text{color:#AD2325;font-size:30rpx;float:right;font-weight:normal}
+.lw-pop>view:nth-child(2){font-size:28rpx}
+.miniProgram{bottom:0;top:0}
+.lw-pop-cont>view{display:inline-block;width:30%;border-radius:10rpx;background:#FAFAFA;font-weight:bold;height:250rpx;position:relative;text-align:center;font-size:28rpx;padding:35rpx 0;margin-top:30rpx;margin-left:10rpx;margin-right:10rpx}
+.lw-pop-cont>view view:nth-child(2){text-overflow:-o-ellipsis-lastline;overflow:hidden;text-overflow:ellipsis;display:-webkit-box;-webkit-line-clamp:1;line-clamp:1;-webkit-box-orient:vertical}
+.lw-pop-cont>view view:nth-child(3){font-size:24rpx;color:#999;font-weight:normal;text-overflow:-o-ellipsis-lastline;overflow:hidden;text-overflow:ellipsis;display:-webkit-box;-webkit-line-clamp:1;line-clamp:1;padding:0 10rpx;-webkit-box-orient:vertical}
+.lw-pop-cont>view view:nth-child(4){height:50rpx;width:120rpx;background:#fff;color:#AD2325;border-radius:8rpx;margin:0 auto;margin-top:20rpx;font-weight:normal;line-height:45rpx}
+.lw-pop-cont>view image{height:70rpx;width:70rpx;border-radius:8rpx}
+.fw-iew1{display:flex;align-items:center;width: 95%;margin-bottom: 8rpx;}
+.fw-store .fw-logo{top:10rpx}
+.for-y{font-size: 42rpx;margin-top: 5rpx;}

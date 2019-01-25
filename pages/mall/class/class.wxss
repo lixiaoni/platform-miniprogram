@@ -1,0 +1,13 @@
+.cl-cont{margin:20rpx;font-size:30rpx;position:relative;overflow:scroll;height:88%;color:#666;font-weight: bold}
+.cl-left{width:170rpx;background:#fff;height:1200rpx;overflow:scroll}
+.cl-left view{border-right:2rpx solid #F7F7F7;height: 120rpx;text-align:center;border-bottom: 2rpx solid #F5F5F5;padding:0 50rpx;display: flex;align-items: center;justify-content: space-around;flex-direction: column;}
+.cl-left view.active{color:#AE2425;border-bottom:2rpx solid #AE2425;background:#F7F7F7;border-right:0;font-weight:bold}
+.cl-right{position:absolute;left:190rpx;top:0;width:72%;height:1200rpx;overflow:scroll;}
+.cl-right view view{height:100rpx;line-height:100rpx;font-weight: normal;padding-left:40rpx}
+.cl-right image{width:40rpx;height:40rpx;float:right;margin-top:38rpx}
+.cl-right view view.active{font-weight:bold;display:flex;align-items:center;justify-content:center;background:#F7F7F7;color: #333}
+.gold-border{border-top:1rpx solid #000;width:60rpx;display:inline-block}
+.padding-box{margin:0 30rpx}
+.cl-right view view:not(:first-child){background: #fff;}
+.cl-right view view:nth-child(2){border-top-right-radius:10rpx;border-top-left-radius:10rpx;background: #fff}
+.cl-right view{border-bottom-right-radius:10rpx;border-bottom-left-radius:10rpx;}

@@ -1,0 +1,85 @@
+<login id='login'></login>
+<view class="weui_cells weui_cells_n">
+  <view class="weui-cell">
+    <view class="weui-cell__hd">
+      <image src="{{user.headPic?baseUrl+user.headPic:defaultHead}}" mode="widthFix"></image>
+    </view>
+    <view class="weui-cell__name">
+      <view style='display:flex;align-items:center;'>
+        <text class='user-text'>{{user.name}}</text>
+        <image class='sex-icon' wx:if="{{user.sex==1}}" src='/image/man.png'></image>
+        <image class='sex-icon' wx:if="{{user.sex==2}}" src='/image/ermR.png'></image>
+        <view wx:if='{{isSuperAdmin}}' class='floor-admin'>超级管理员</view>
+        <view wx:else class='floor-admin'>楼层管理员</view>
+      </view>
+      
+      <view class="weui-dp">
+        <image wx:if="{{user.mallLogo}}" src='{{baseUrl+user.mallLogo}}?x-oss-process=style/logo' mode="widthFix"></image>{{user.mallName?user.mallName:""}} <text hidden='{{isSuperAdmin}}'>{{user.deptName?user.deptName:""}}</text>
+      </view>
+    </view>
+    <!-- <view class='weui-view'>
+        <image class='img' src="/image/icl.png"></image>
+      </view> -->
+  </view>
+</view>
+<view class="weui_cells " hidden="{{isSuperAdmin}}">
+  <view>
+    <text class="store-address">优惠码 </text>
+    <view class='weui-view'>
+      {{user.referralCode?user.referralCode:'暂无'}}
+    </view>
+    <view class='weui-xian weui-xian1'></view>
+  </view>
+  <!-- <navigator url='../derm/derm'>
+        <text class="store-address">我的二维码 </text>
+        <view class='weui-view'>
+          <image class='m-img' src="/image/er.png"></image><image class='img' src="/image/icl.png"></image>
+        </view>
+        <view class='weui-xian weui-xian1'></view>
+    </navigator> -->
+  <navigator url='../../floor/myFloor/myFloor'>
+    <text class="store-address">我的楼层管理 </text>
+    <view class='weui-view'>
+      <image class='img' src="/image/icl.png"></image>
+    </view>
+    <view class='weui-xian weui-xian1'></view>
+  </navigator>
+  <!-- <view>
+        <text class="store-address">设置 </text>
+        <view class='weui-view'>
+          <image class='img' src="/image/icl.png"></image>
+        </view>
+    </view> -->
+</view>
+<view class="weui_cells " bindtap='tel'>
+  <view>
+    <image src="/image/u2.png"></image>
+    <text class="store-address">联系优生活 </text>
+    <view class='weui-view'>
+      <image class='img' src="/image/icl.png"></image>
+    </view>
+  </view>
+</view>
+<view class="weui_cells "  wx:if="{{!isSuperAdmin}}">
+  <view>
+    <image src="/image/yq.png"></image>
+    <text class="store-address">邀请商户开启小云店 </text>
+    <view class='weui-view'>
+      <image class='img' src="/image/icl.png"></image>
+    </view>
+  </view>
+</view>
+<view class='bottom_M'>
+  <navigator  open-type='redirect'  url='../../work/workIndex/workIndex'>
+    <image src="/image/work.png"></image>
+    <view>工作台</view>
+  </navigator>
+  <navigator  url='{{isSuperAdmin?"../../work/adminShopList/adminShopList":"../../work/shopList/shopList"}}'>
+    <image src="/image/12.png"></image>
+    <view>小云店</view>
+  </navigator>
+  <view>
+    <image src="/image/w12.png"></image>
+    <view class='active'>我的</view>
+  </view>
+</view>

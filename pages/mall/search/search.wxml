@@ -1,0 +1,49 @@
+<view class="goods-ser">
+  <input placeholder="搜索商品或小云店" bindinput='changeValue' bindconfirm="searchBtn" value="{{value}}" />
+  <image class="home-ser" src="/image/search1.png"></image>
+  <view class='goods-ser-right' bindtap="searchBtn">搜索</view>
+</view>
+<view class='fw-title'>
+  <view class="{{currentTab==0?'active':''}}" data-current='0' bindtap="swichNav">商品
+    <view></view>
+  </view>
+  <view class="{{currentTab==1?'active':''}}" data-current='1' bindtap="swichNav">小云店
+    <view></view>
+  </view>
+</view>
+<view class="init-page" wx:if="{{history.length > 0}}">
+  <view>
+    <image bindtap="removeAll" src="/image/rev.png"></image>
+    <!-- <view class="title"><text>历史搜索</text></view> -->
+    <view class="title">
+      <image mode="widthFix" src="/image/his.png"></image>
+    </view>
+    <view class="tags">
+      <view wx:for="{{history}}" wx:key="index">
+        <view data-name="{{item}}" bindtap="keywordHandle">{{item}}</view>
+      </view>
+    </view>
+  </view>
+</view>
+<view class="init-page">
+  <view wx:if='{{currentTab==0}}'>
+    <view class="title">
+      <image mode="widthFix" src="/image/hot.png"></image>
+    </view>
+    <view class="tags">
+      <view wx:for="{{hot}}" wx:key="index">
+        <view data-name="{{item}}" bindtap="keywordHandle">{{item}}</view>
+      </view>
+    </view>
+  </view>
+  <view wx:if='{{currentTab==1}}'>
+    <view class="title">
+      <text>热门搜索</text>
+    </view>
+    <view class="tags">
+      <view wx:for="{{hot1}}" wx:key="index">
+        <view data-name="{{item}}" bindtap="keywordHandle">{{item}}</view>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,41 @@
+<view class='n-tj'>
+  <view  class='n-tj-1'>
+    <view>
+    <view class='fd-x'></view>{{name}}
+    <view class='fd-x fd-x1'></view>
+  </view>
+  <view>{{desc}}</view>
+  </view>
+  <image mode="widthFix" src="{{baseUrl}}{{imageUrl}}" class='backFd'></image>
+  <!-- <view class='n-down'></view> -->
+</view>
+<view class="st-cont" wx:for="{{goodsList}}" wx:key="index">
+  <view class='miniDetails' data-store-nature='{{item.storeVO.storeNature}}' data-store-id='{{item.storeId}}' data-goods-id='{{item.id}}' bindtap='toMiniProgram'></view>
+  <image class="cart-thumb" src="{{baseUrl}}{{item.mainImgUrl}}?x-oss-process=style/goods-small"></image>
+  <view class='st-d-t'>{{item.name}}</view>
+  <view class='st-details'>
+    <view class='st-d-status'>
+      <block wx:if='{{item.storeVO.storeNature==2}}'>
+        <view class='ser-font'>零售：<text>￥{{item.sellPrice}}</text></view>
+      </block>
+      <block wx:if='{{item.storeVO.storeNature==1}}'>
+        <view wx:if='{{item.isPurchaser}}'>
+          <view class='ser-font-9 ser-font-line'>零售：
+            <text>￥{{item.sellPrice}}</text>
+          </view>
+          <view class='ser-font'>批发：<text>￥{{item.wholesalePrice}}</text></view>
+        </view>
+        <view wx:else>
+          <view class='ser-font'>零售：<text>￥{{item.sellPrice}}</text></view>
+          <view class='ser-font-9'>批发：
+            <image src='/image/wh.png'></image>
+          </view>
+        </view>
+      </block>
+      <view>{{item.storeVO.name}}
+        <image src='/image/mallr.png'></image>
+      </view>
+    </view>
+  </view>
+  <view class='v-city'>{{item.storeVO.city==null?'':item.storeVO.city}}</view>
+</view>
