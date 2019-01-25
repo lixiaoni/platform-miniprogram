@@ -8,6 +8,7 @@
 .swiper-tab-item{font-size:28rpx;display:inline-block;width:33.33%;color:#666;position:relative}
 .swiper-tab-item image{width:25rpx;vertical-align:middle;margin-left:5rpx;height:25rpx}
 .on{color:#AD2325;position:relative}
+
 .on view:last-child{height:2rpx;width:80rpx;background:#AD2325;left:50%;margin:0 auto}
 .st-cont{position:relative;padding-left:335rpx;color:#333;min-height:290rpx;font-size:28rpx;padding-right:30rpx;padding-top:30rpx;width:65%;background:#fff;border-radius:10rpx}
 .st-cont image{height:260rpx;width:260rpx;left:45rpx;position:absolute}

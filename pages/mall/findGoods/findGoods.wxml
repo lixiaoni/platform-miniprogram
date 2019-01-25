@@ -7,7 +7,7 @@
   <view>{{desc}}</view>
   </view>
   <image mode="widthFix" src="{{baseUrl}}{{imageUrl}}" class='backFd'></image>
-  <!-- <view class='n-down'></view> -->
+  <view class='n-down'></view>
 </view>
 <view class="st-cont" wx:for="{{goodsList}}" wx:key="index">
   <view class='miniDetails' data-store-nature='{{item.storeVO.storeNature}}' data-store-id='{{item.storeId}}' data-goods-id='{{item.id}}' bindtap='toMiniProgram'></view>

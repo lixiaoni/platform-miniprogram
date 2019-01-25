@@ -50,9 +50,9 @@
       <view></view>
     </view>
     </view>
-    <!-- <view class='n-down'></view> -->
+     <image mode="widthFix"  src="{{baseUrl}}{{item.imageUrl}}" class='backFd'></image>
+    <view class='n-down'></view>
   </view>
-  <image mode="widthFix"  src="{{baseUrl}}{{item.imageUrl}}" class='backFd'></image>
   <view class='n-tj-goods'>
     <view>
       <view wx:for="{{item.goodsList}}" wx:key='{{index}}' wx:if='{{index<3}}'>

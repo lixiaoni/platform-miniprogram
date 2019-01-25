@@ -1,4 +1,4 @@
-@import '../follow/follow';.swiper{height:560rpx;width:100%}
+@import '../follow/follow';.swiper{height:460rpx;width:100%}
 .swiper image{height:100%;width:100%}
 .nt-title{background:#fff;margin-bottom:20rpx 0;padding:50rpx 0;margin-top:0}
 .nt-title>view{display:inline-block;width:49%;text-align:center;font-size:32rpx;position:relative}
@@ -9,7 +9,7 @@
 .lw-pop{padding:40rpx 50rpx}
 .lw-pop>view:first-child view{float:right;font-weight:normal}
 .lw-pop>view:first-child view text{font-size:24rpx;color:#999;float:none}
-.fw-cont>view{width:365rpx;position:relative;margin-top:40rpx}
+.fw-cont>view{width:365rpx;position:relative;margin-top:40rpx;overflow: hidden}
 .fw-c-img{width:365rpx;height:365rpx;text-align:center}
 .fw-c-img image{max-width:365rpx;max-height:365rpx}
 .fw-cont{color:#333}
@@ -29,15 +29,15 @@
 .f-class>navigator view{position: absolute;bottom: -20rpx;text-align: center;width: 100%}
 .f-class>view image,.f-class>navigator image{width:100rpx}
 .f-class>navigator:last-child image{width: 50rpx;height: 50rpx;margin-top:27rpx;margin-bottom:26rpx;}
-.n-tj{color:#fff;font-size:32rpx;text-align:center;position:relative}
+.n-tj{color:#fff;font-size:32rpx;text-align:center;position:relative;background:#fff}
 .n-tj-1 view:nth-child(2){font-size:22rpx;margin-bottom:50rpx}
 .n-tj-button{display:inline-block;width:150rpx;height:40rpx;background:#CCAA77;line-height:40rpx;color:#fff;padding:0;font-size:24rpx;border-radius:0;vertical-align:middle;margin:0 20rpx}
 .n-tj-1>view>view{display:inline-block;width:130rpx;height:4rpx;border-top:4rpx solid #9A9B9C;padding-bottom:2rpx}
-.n-tj-1 .n-down{width:0;height:0;border-bottom:20rpx solid #fff;border-left:16rpx solid transparent;border-right:16rpx solid transparent;position:absolute;bottom:0;left:50%;margin-left:-10rpx}
 .n-tj-goods>view>view{width:33.3%;display:inline-block;font-size:24rpx;color:#999;padding-bottom:60rpx;background:#fff;margin-bottom:40rpx;position: relative;text-align: center}
 .n-tj-goods{background: #fff;}
 .n-tj-goods>view{padding:30rpx;padding-bottom: 0}
 .n-tj view{position: relative;z-index: 100}
+.n-tj view.n-down{width:0;height:0;border-bottom:20rpx solid #fff;border-left:16rpx solid transparent;border-right:16rpx solid transparent;position:absolute;bottom:10rpx;left:50%;margin-left:-10rpx}
 .n-tj .n-tj-1{position: absolute;margin-top:85rpx;width: 100%}
 .n-tj-goods view image{width:220rpx;height:220rpx;}
 .n-tj-goods>view>view>view{margin-bottom:10rpx;text-overflow:-o-ellipsis-lastline;overflow:hidden;text-overflow:ellipsis;display:-webkit-box;-webkit-line-clamp:2;line-clamp:2;-webkit-box-orient:vertical;height: 70rpx;padding: 0 10rpx;margin-top: 10rpx;color: #333;}

@@ -18,7 +18,7 @@
           <image class='fw-c-img' src='{{baseUrl}}{{list.mainImgUrl}}?x-oss-process=style/goods-small'></image>
           <block wx:if='{{item.store.storeNature==2}}'>
             <view class='ym-pri'>零售:
-              <text class='fw-you'>￥{{item.sellPrice}}</text>
+              <text class='fw-you'>￥{{list.sellPrice}}</text>
             </view>
           </block>
           <block wx:if='{{item.store.storeNature==1}}'>

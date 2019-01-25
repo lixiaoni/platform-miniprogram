@@ -107,7 +107,7 @@ input:focus{padding:0}
 .bottom_M>view,.bottom_M>navigator{width:33%;text-align:center;color:#888;font-size:20rpx;display:inline-block;background:#fff;height:104rpx;padding-top:20rpx}
 .bottom_M image{width:47rpx;height:47rpx}
 .bottom_M .active{color:#AD2325}
-.common-flex-between{display:flex;justify-content:space-between;align-items:center}
+.common-flex-between{display:flex;justify-content:space-between;align-items:center;width: 90%}
 .radius-box{border-radius:5px}
 .common-in-icon{width:24rpx;height:29rpx}
 .fw-cont text.ys-font-line{text-decoration: line-through;color: #999}
