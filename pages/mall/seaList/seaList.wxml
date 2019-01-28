@@ -61,14 +61,14 @@
     <view class='st-style'>
       <view class='st-d-status'>
         <block wx:if='{{item.storeVO.storeNature==2}}'>
-          <view class='ser-font'>零售：￥<text>{{item.sellPrice}}</text></view>
+          <view class='ser-font'>零售：<text>￥{{item.sellPrice}}</text></view>
         </block>
         <block wx:if='{{item.storeVO.storeNature==1}}'>
           <view wx:if='{{item.isPurchaser}}'>
             <view class='ser-font-9 ser-font-line'>零售：
               <text>￥{{item.sellPrice}}</text>
             </view>
-            <view class='ser-font'>批发：￥<text>{{item.wholesalePrice}}</text></view>
+            <view class='ser-font'>批发：<text>￥{{item.wholesalePrice}}</text></view>
           </view>
           <view wx:else>
             <view class='ser-font' style='font-size:26rpx'>零售：<text>￥{{item.sellPrice}}</text></view>

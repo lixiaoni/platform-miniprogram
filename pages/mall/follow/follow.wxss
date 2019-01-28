@@ -1,9 +1,9 @@
 .fw-store{background:#fff;margin:20rpx;position:relative;border-radius:10rpx;padding:40rpx 30rpx}
-.fw-store .fw-top{position:relative;font-size:30rpx;font-weight: bold;padding-left:90rpx;margin-top:10rpx}
+.fw-store .fw-top{position:relative;font-size:30rpx;font-weight: bold;padding-left:100rpx;margin-top:10rpx}
 .fw-top view.fw-iew{font-size:24rpx;color:#999;padding-right:47rpx}
 .fw-top view.fw-iew text{color:#333;margin-right:20rpx;font-weight: normal}
 .fw-top view.fw-iew text.text{color:#999}
-.fw-top view.fw-iew1 text{border:2rpx solid #AD2325;font-size:24rpx;color:#AD2325;border-radius:8rpx;margin-left:10rpx;height:34rpx;line-height:34rpx;font-weight: normal}
+.fw-top view.fw-iew1 text{border:2rpx solid #ddd;font-size:24rpx;color:#AD2325;border-radius:8rpx;margin-left:20rpx;height:34rpx;line-height:34rpx;font-weight: normal}
 .fw-top view.fw-iew1 text:first-child{width: 100rpx;text-align: center}
 .fw-top view.fw-iew1 text:nth-child(2){background:#FF5C52;color:#fff;border:0;border-radius: 0;padding: 0 5rpx}
 .fw-store .fw-logo{height:80rpx;width:80rpx;position:absolute;left:0;border-radius:10rpx}

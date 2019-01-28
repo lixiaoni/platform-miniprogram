@@ -1,14 +1,14 @@
 
 .user-headPic{overflow:hidden;display:block;border-radius:50%;max-width:160rpx;max-height:160rpx}
-.u-title{position:relative;background:#fff;margin-top:-2rpx;text-align:center;height:400rpx;margin-bottom:110rpx;overflow:initial}
+.u-title{position:relative;background:#f7f7f7;margin-top:-2rpx;text-align:center;height:400rpx;margin-bottom:110rpx;overflow:initial}
 .u-t-con{position:relative}
 .u-t-ewmico{width:160rpx;height:160rpx;border-radius:50%;margin:17rpx 46rpx 0 60rpx}
 .u-pic{color:#333;font-size:32rpx;text-align:center;padding-top:30rpx}
 .weui-back{margin-top:30rpx}
-.weui-back1{margin-top:20rpx}
-.u-pic button{color:white;height:60rpx;padding:0;line-height:55rpx;background:#bd0d23;font-size:24rpx;width:160rpx;border:1rpx solid white}
+.weui-back1{margin-top:20}
 .u-pic view{margin-bottom:30rpx}
 .weui-img{font-size:28rpx;color:#C79359}
+.u-pic button{color:white;height:60rpx;padding:0;line-height:55rpx;font-size:24rpx;width:160rpx;border:1rpx solid white}
 .weui-img image{width:24rpx;height:29rpx;margin-top:0rpx;vertical-align:middle;margin-left:6rpx;margin-right:10rpx}
 .weui-cell__bd{font-size:30rpx;color:#333}
 .page_hd1{background:#fff;height:105rpx;margin-top:20rpx}

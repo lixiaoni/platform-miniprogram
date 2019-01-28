@@ -1,4 +1,5 @@
-@import '../newest/newest';page{background:#ffffff}
+@import '../newest/newest';
+page{background:#ffffff}
 .goods-ser{padding:20rpx 30rpx;background:#F7F7F7;}
 .home-ser{top:35rpx;left:60rpx}
 .home-ser1{left:87%;width:40rpx;height: 40rpx;top: 40rpx;}
@@ -8,9 +9,8 @@
 .swiper-tab-item{font-size:28rpx;display:inline-block;width:33.33%;color:#666;position:relative}
 .swiper-tab-item image{width:25rpx;vertical-align:middle;margin-left:5rpx;height:25rpx}
 .on{color:#AD2325;position:relative}
-
 .on view:last-child{height:2rpx;width:80rpx;background:#AD2325;left:50%;margin:0 auto}
-.st-cont{position:relative;padding-left:335rpx;color:#333;min-height:290rpx;font-size:28rpx;padding-right:30rpx;padding-top:30rpx;width:65%;background:#fff;border-radius:10rpx}
+.st-cont{position:relative;padding-left:335rpx;color:#333;min-height:290rpx;font-size:28rpx;padding-right:30rpx;padding-top:30rpx;background:#fff;border-radius:10rpx}
 .st-cont image{height:260rpx;width:260rpx;left:45rpx;position:absolute}
 .st-d-status{margin-top:10rpx}
 .st-details{position:absolute;bottom: 20rpx}
@@ -37,6 +37,6 @@
 .st-cont-s image{width:365rpx;height:365rpx;}
 .st-cont-s .st-d-t{font-size: 26rpx;padding:0 20rpx;margin-top: 10rpx;margin-bottom:20rpx;width:325rpx;word-break: break-all}
 .st-style{position: relative;padding-left: 20rpx;}
-.st-cont-s .st-style image{width:40rpx;height:40rpx;vertical-align:middle;position:relative;left:10rpx}
+.st-cont-s .st-style image{width:30rpx;height:30rpx;vertical-align:middle;position:relative;left:10rpx;margin-top: -2rpx}
 .st-cont-s .v-city{bottom: 0rpx;right: 20rpx}
 .goods-ser>view:first-child{width: 91%}
